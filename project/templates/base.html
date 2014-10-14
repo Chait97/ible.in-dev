@@ -1,27 +1,71 @@
 <!doctype html>
 <head>
   <meta charset="utf-8">
-  <title>{% block page_title %}Your Site{% endblock %}</title>
+  <title>{% block page_title %} Misfit Tidbits {% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   {% block css %}{% endblock %}
 
 </head>
-<body class="box">
+<body>
 
-<nav class="nav-menu">
+<!--<nav class="nav-menu">
     <ul>
         <li><a href="{{ url_for('home') }}">Home</a></li>
         <li><a href="https://github.com/sloria/flask-ghpages-example">Source</a></li>
     </ul>
-</nav>
+</nav> -->
+
+<div id="topContainer">
+      <div id="topLeft">
+        <ul>
+          <li><a href="/archive">Archive</a></li>
+          <li><a href="http://what-if.xkcd.com">What If?</a></li>
+          <li><a href="http://blag.xkcd.com">Blag</a></li>
+          <li><a href="http://store.xkcd.com/">Store</a></li>
+          <li><a rel="author" href="/about">About</a></li>
+        </ul> 
+      </div>
+      <div id="topRight">
+        <div id="masthead">
+          <span><a href="/"><img src="/static/img/dj_goat.gif" alt="xkcd.com logo" height="83" width="185"/></a></span>
+          <span id="slogan">A webcomic of romance,<br/> sarcasm, math, and language.</span>
+        </div>
+        <div id="news">
+          no news yet
+        </div>
+      </div>
+      <div id="bgLeft" class="bg box"></div>
+      <div id="bgRight" class="bg box"></div>
+</div>
+
+
 
 <div class="{% block content_class %}container{% endblock content_class %}">
-
-  <div class="content" role="main">
-    {% block content %}{% endblock %}
+   &nbsp;
+  <div class="box">
+    <div class="content" role="main">
+      {% block content %}{% endblock %}
+    </div>
   </div>
-
 </div><!-- end container -->
+
+<div id="bottom" class="box">
+    <div id="comicLinks">
+    Comics I enjoy:<br/>
+        <a href="http://threewordphrase.com/">Three Word Phrase</a>,
+        <a href="http://oglaf.com/">Oglaf</a> (nsfw),
+        <a href="http://www.smbc-comics.com/">SMBC</a>,
+        <a href="http://www.qwantz.com">Dinosaur Comics</a>,
+        <a href="http://www.asofterworld.com">A Softer World</a>,
+        <a href="http://buttersafe.com/">Buttersafe</a>,
+        <a href="http://pbfcomics.com/">Perry Bible Fellowship</a>,
+        <a href="http://questionablecontent.net/">Questionable Content</a>,
+        <a href="http://www.buttercupfestival.com/">Buttercup Festival</a>
+    </div>
+    <p>Warning: this comic occasionally contains strong language (which may be unsuitable for children), unusual humor (which may be unsuitable for adults), and advanced mathematics (which may be unsuitable for liberal-arts majors).</p>
+  </div>
+  
+
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

@@ -5,12 +5,16 @@ from app import app, pages
 
 @app.route('/')
 def home():
+    posts = [page for page in pages]
+    return render_template('page.html', page=posts[-1])
+
+@app.route('/archive/')
+def archive():
     posts = [page for page in pages if 'date' in page.meta]
     # Sort pages by date
     sorted_posts = sorted(posts, reverse=True,
         key=lambda page: page.meta['date'])
     return render_template('index.html', pages=sorted_posts)
-
 
 @app.route('/<path:path>/')
 def page(path):
