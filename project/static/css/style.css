@@ -31,6 +31,7 @@ img{
   border-radius: 12px;
   -moz-border-radius: 12px;
 }
+
 /* END GENERAL FORMAT */
 /* START UPPER LAYOUT */
 #topContainer{ 
@@ -101,9 +102,9 @@ img{
 
 /*START MIDDLE */
 #middleContainer {
-  width:780px;
+  width:720px;
   margin: 5px  auto;
-  padding: 10px 0;
+  padding: 10px 30px;
 }
 
 #ctitle {
@@ -154,7 +155,7 @@ ul.comicNav a:hover, ul.comicNav a:focus {
 }
 #bottom {
   margin-top:5px;
-  padding:25px 15px;
+  padding:10px 15px;
   width:750px;
 }
 #comicLinks {
